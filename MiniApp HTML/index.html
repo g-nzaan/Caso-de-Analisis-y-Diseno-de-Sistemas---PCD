@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎓 Catálogo de Cursos Demo</title>
+
+  <!-- Importa fuentes desde Google Fonts para mejorar la estética -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS para decorar la página -->
+  <style>
+    /* Estilo general del cuerpo */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Encabezado principal */
+    header {
+      background-color: #00695c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Contenedor principal */
+    main {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Título secundario */
+    h2 {
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+
+    /* Etiqueta del input */
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+
+    /* Campo de entrada numérica */
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #b2dfdb;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    /* Botón de búsqueda */
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efecto hover en el botón */
+    button:hover {
+      background-color: #004d40;
+    }
+
+    /* Contenedor del resultado */
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #e0f2f1;
+      font-size: 16px;
+    }
+
+    /* Mensaje de error */
+    .error {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    /* Ícono decorativo del curso */
+    .course-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #00796b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado de la página -->
+  <header>
+    <h1>🎓 Catálogo de Cursos Demo</h1>
+    <p>Explora los cursos disponibles por ID</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h2>📋 Cursos disponibles (ID): 1, 2, 3</h2>
+
+    <!-- Campo para ingresar el ID -->
+    <label for="courseId">🔍 Ingrese el ID del curso a buscar:</label>
+    <input type="number" id="courseId" placeholder="Ejemplo: 2" />
+
+    <!-- Botón que ejecuta la búsqueda -->
+    <button onclick="buscarCurso()">Buscar Curso</button>
+
+    <!-- Contenedor donde se mostrará el resultado -->
+    <div id="resultado" class="result"></div>
+  </main>
+
+  <!-- Lógica en JavaScript -->
+  <script>
+    // Lista de cursos simulando una base de datos
+    const cursos = [
+      { id: 1, nombre: "Algoritmos I", area: "CS" },
+      { id: 2, nombre: "Introducción a la Programación", area: "CS" },
+      { id: 3, nombre: "Matemática Discreta", area: "Math" }
+    ];
+
+    // Función que se ejecuta al hacer clic en el botón
+    function buscarCurso() {
+      // Obtiene el valor ingresado por el usuario
+      const input = document.getElementById("courseId").value;
+
+      // Referencia al contenedor de resultados
+      const resultadoDiv = document.getElementById("resultado");
+
+      // Limpia resultados anteriores
+      resultadoDiv.innerHTML = "";
+
+      // Convierte el valor a número entero
+      const id = parseInt(input);
+
+      // Verifica si el valor es un número válido
+      if (!isNaN(id)) {
+        // Busca el curso por ID usando find (similar a FirstOrDefault en C#)
+        const curso = cursos.find(c => c.id === id);
+
+        // Si se encuentra el curso, muestra los datos
+        if (curso) {
+          resultadoDiv.innerHTML = `
+            <div class="course-icon">📘</div>
+            <strong>--- Curso Encontrado ---</strong><br>
+            <strong>ID:</strong> ${curso.id}<br>
+            <strong>Nombre:</strong> ${curso.nombre}<br>
+            <strong>Área:</strong> ${curso.area}<br>
+          `;
+        } else {
+          // Si no se encuentra el curso, muestra mensaje de error
+          resultadoDiv.innerHTML = `<span class="error">❌ Error: No se encontró un curso con ID ${id}.</span>`;
+        }
+      } else {
+        // Si el valor ingresado no es válido, muestra mensaje de error
+        resultadoDiv.innerHTML = `<span class="error">⚠️ Error: Por favor, ingrese un número de ID válido.</span>`;
+      }
+    }
+  </script>
+</body>
+</html>

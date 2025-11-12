@@ -1,8 +1,0 @@
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\obj\Debug\CatalogoCursos.csproj.AssemblyReference.cache
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\obj\Debug\CatalogoCursos.csproj.CoreCompileInputs.cache
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\bin\Debug\CatalogoCursos.exe.config
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\bin\Debug\CatalogoCursos.exe
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\bin\Debug\CatalogoCursos.pdb
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\obj\Debug\CatalogoCursos.exe
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\obj\Debug\CatalogoCursos.pdb
-C:\Users\choco\OneDrive\Documentos\VS 2022 C#\CatalogoCursos\obj\Debug\CatalogoCursos.exe.config

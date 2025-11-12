@@ -17,4 +17,6 @@ Al abrir la página, el usuario puede ingresar un ID de curso (1, 2 o 3) en el c
 Evidencia y Coordinación
 La gestión del proyecto se realizó utilizando un tablero Kanban en Trello, lo que permitió desglosar las tareas, darles seguimiento y mantener un registro organizado de los avances. Este tablero también sirvió para documentar la evidencia de cada actividad realizada, asegurando que se cumplieran los criterios de finalización establecidos.
 
+Copilot nos fue de gran ayuda durante el desarrollo de nuestro proyecto, ya que nos permitió corregir errores en el código y mejorar su estructura de manera más eficiente. Gracias a sus sugerencias automáticas, pudimos identificar fallos de sintaxis y optimizar ciertas funciones que no estaban cumpliendo correctamente su propósito. Además, Copilot nos sirvió como una guía de aprendizaje, mostrándonos paso a paso cómo implementar partes clave de la aplicación. A través de sus recomendaciones, aprendimos nuevas formas de programar y logramos comprender mejor la lógica necesaria para que la app funcionara correctamente. En general, su apoyo facilitó mucho el proceso de desarrollo y fortaleció nuestras habilidades en programación.
+
 Enlace al tablero Trello: [https://trello.com/invite/b/690b94884c2ec02a3fd29e7f/ATTI306aa913201588ef1b7a8ae116cfbe58485AFF24/caso-de-estudio-ayds](url)
